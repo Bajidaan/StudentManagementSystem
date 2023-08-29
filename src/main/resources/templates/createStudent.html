@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Offline Bootstrap</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <script th:src="@{/js/jquery-3.6.0.js}"></script>
+    <script th:src="@{/static/js/bootstrap.js}"></script>
+    </style>
+</head>
+<body>
+
+<div class="container mt-2 mb-3">
+    <form th:action="@{/api/student/addStudent}" action="#" method="post" th:object="${studentForm}">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input th:field="*{first}" type="text" class="form-control" id="firstName">
+        </div>
+        <div class="mb-3">
+            <label for="middleName" class="form-label">Middle Name</label>
+            <input th:field="*{middle}" type="text" class="form-control" id="middleName">
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input th:field="*{last}" type="text" class="form-control" id="lastName">
+        </div>
+
+        <div class="mb-3">
+            <label for="house" class="form-label">House</label>
+            <select th:field="*{house}" id="house" class="form-select  form-control">
+                <option value="" selected>---</option>
+                <option value="Slytherin">Slytherin</option>
+                <option value="Ravenclaw">Ravenclaw</option>
+                <option value="Hufflepuff">Hufflepuff</option>
+                <option value="Gryffindor">Gryffindor</option>
+
+            </select>
+
+        </div>
+        <div class="mb-3">
+            <label for="birthYear" class="form-label">Birth Year</label>
+            <input th:field="*{birth}" type="text" class="form-control" id="birthYear">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

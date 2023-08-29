@@ -1,0 +1,14 @@
+GET http://localhost:8081/api/student/7
+
+###
+POST http://localhost:8081/api/student
+Content-Type: application/json
+
+{
+  "id": 41,
+  "first": "Babajide",
+  "middle": "Zakariyyah",
+  "last": "Daniju",
+  "house": "Ravenclaw",
+  "birth": 1981
+}

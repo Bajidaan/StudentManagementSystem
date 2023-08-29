@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1">-->
+        <title>Student</title>
+        <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+        <script th:src="@{/js/jquery-3.6.0.js}"></script>
+        <script th:src="@{/static/js/bootstrap.js}"></script>
+    </head>
+    <body>
+    <div>
+        <table class="jumbotron table">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>first</th>
+                <th>middle</th>
+                <th>last</th>
+                <th>house</th>
+                <th>birth</th>
+            </tr>
+            </thead>
+            <tbody class="table-group-divider">
+            <tr th:each="student: ${studentView}">
+                <td th:text="${student.id}"/>
+                <td th:text="${student.first}"/>
+                <td th:text="${student.middle}"/>
+                <td th:text="${student.last}"/>
+                <td th:text="${student.house}"/>
+                <td th:text="${student.birth}"/>
+
+            </tr>
+
+
+            </tbody>
+
+        </table>
+    </div>
+
+    </body>
+</html>
